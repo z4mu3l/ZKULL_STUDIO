@@ -1,0 +1,243 @@
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ENCABEZADO Y NAVEGACIÓN */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    backdrop-filter: blur(6px);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.marca img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.fondo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #f5f5f5;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.75;
+}
+
+.icon-bolsa {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    stroke: #fff;
+}
+
+/* SECCIÓN PRINCIPAL */
+#hero {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    padding: 0 20px;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+#hero p {
+    font-size: 1.4rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* SECCIÓN DE PRENDAS */
+#prendas {
+    padding: 4rem 0;
+}
+
+#prendas h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.prendas-card {
+    padding-bottom: 1rem;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.prendas-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.prendas-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background-color: #f5f5f5;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.prendas-card:hover img {
+    transform: scale(1.1);
+}
+
+.prendas-card p,
+.prendas-card button {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.precio {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+/* CONTACTO */
+#contacto {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #f5f5f5;
+}
+
+#redes a {
+    text-decoration: none;
+}
+
+#redes i {
+    font-size: 35px;
+    margin: 0 10px;
+    color: #333;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #111;
+    color: white;
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+@media (max-width: 576px) {
+    nav {
+        padding: 0.5rem 1rem;
+    }
+
+    .marca img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .fondo {
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1.1rem;
+    }
+
+    .prendas-card p,
+    .prendas-card button {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
